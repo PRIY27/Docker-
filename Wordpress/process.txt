@@ -1,0 +1,39 @@
+Step 1: Install Docker Compose
+
+Download the Docker Compose binary:
+
+>>> curl -SL https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+Step 2: Grant Execute Permissions
+
+Make the downloaded file executable:
+
+>>> sudo chmod +x /usr/local/bin/docker-compose
+
+Alternatively:
+
+>>> sudo chmod 755 /usr/local/bin/docker-compose
+
+Step 3: Create a Directory
+
+Create a directory named wordpress to organize project files:
+
+>>> mkdir wordpress
+
+Step 4: Create the wordpress.yml File
+
+Navigate to the wordpress directory:
+
+>>> cd wordpress
+
+Create the wordpress.yml file using a text editor:
+
+>>> nano wordpress.yml
+
+Run in the foreground:
+
+>>> docker-compose -f wordpress.yml up
+
+Run in detached mode (background):
+
+>>>> docker-compose -f wordpress.yml up -d
